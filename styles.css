@@ -1,0 +1,268 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100vh;
+    line-height: 2;
+}
+
+body {
+    font-size: .9rem;
+    height: 10vh;
+    min-width: 320px;
+    font-family: 'Merriweather', serif;
+    /* background-color: black; */
+    margin-top: 0;
+    color: #1c2e3a;
+}
+
+header {
+    /* width: 90%; */
+    margin: 0 auto;
+    text-align: center;
+    color: rgb(105, 104, 104);
+}
+
+main {
+    min-height: 100vh;
+    /* width: 90%; */
+    margin: auto;
+    padding: 0 20px 20px;
+    background-color: white;
+}
+
+footer {
+    width: 90%;
+    margin: 25px auto 0;
+    text-align: center;
+    font-style: italic;
+    color: rgb(105, 104, 104);
+}
+
+h1 {
+    margin: 0;
+    padding: 20px 0;
+    font-weight: 700;
+    font-size: 1.4rem;
+    background-color: #1c2e3a;
+    color: white;
+}
+
+h2 {
+    padding: 5px 0;
+    margin: 0 auto;
+    font-weight: 700;
+    font-size: 1.15rem;
+}
+
+p {
+    font-weight: 300;
+    color: rgb(105, 104, 104);
+}
+
+label {
+    font-weight: 300;
+    color: rgb(105, 104, 104);
+}
+
+p {
+    line-height: 1.5;
+    margin-top: 0;
+}
+
+section {
+    margin: 0 auto;
+    text-align: center;
+    padding: 15px 2px;
+    border-bottom: #1c2e3a solid 4px;
+}
+
+.section-container {
+    padding-bottom: 18px;
+}
+
+fieldset {
+    margin: 0px auto 18px;
+    border-style: none;
+    padding: 0;
+    margin: 2px auto 0;
+}
+
+input, select, textarea, button {
+    margin: 10px auto;
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: #eee;
+    line-height: 1.5;
+    font-size: 1rem;
+    padding: 10px 15px;
+    font-family: 'Merriweather', serif;
+}
+
+select {
+    height: 44px;
+    font-weight: 300;
+}
+
+select:required:invalid {
+    color: gray;
+}
+
+option[value=""][disabled] {
+    display: none;
+}
+
+option {
+    color: black;
+}
+
+input:focus {
+    outline-color: darkblue;
+}
+
+input::placeholder {
+    font-style: italic;
+    color: rgb(179, 177, 177);
+    font-weight: 300;
+    text-align: right;
+}
+
+input#zip {
+    width: 150px;
+    margin-left: 0;
+}
+
+textarea {
+    height: 100px;
+    padding: 10px;
+}
+
+button {
+    background-color: #52bab3;
+    margin: 10px auto;
+    padding: 18px;
+    font-size: 1.3rem;
+    color: white;
+}
+
+legend {
+    width: 100%;
+    padding: 18px 0;
+    font-weight: 700;
+    font-size: 1.15rem;
+    border-top: #1c2e3a solid 2px;
+}
+
+.checkbox-container, .radio-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+}
+
+.checkbox-container input, .radio-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark, .radiomark {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    height: 15px;
+    width: 15px;
+    background-color: #eee;
+}
+
+.radiomark {
+    border-radius: 50%;
+}
+
+.checkbox-container input:checked~.checkmark, .radio-container input:checked~.radiomark {
+    background-color: #2196F3;
+}
+
+/* Create the checkmark/rediomark (hidden when not checked) */
+
+.checkmark:after, .radiomark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark, radiomark when checked */
+
+.checkbox-container input:checked~.checkmark:after, .radio-container input:checked~.radiomark:after {
+    display: block;
+}
+
+/* Style the checkmark/radiomark */
+
+.checkbox-container .checkmark:after {
+    left: 4px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.radio-container .radiomark:after {
+    top: 5px;
+    left: 5px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: white;
+}
+
+.full-width {
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        margin: 0;
+        background: none;
+    }
+
+    section {
+        padding: 40px 2px;
+    }
+
+    header {
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+    }
+
+    main {
+        width: 800px;
+    }
+
+    .control-container {
+        display: flex;
+        margin-bottom: 8px;
+        width: 100%;
+    }
+
+    input, select {
+        width: calc(100% - 200px);
+    }
+
+    label {
+        width: 200px;
+        margin: auto 0;
+    }
+}
