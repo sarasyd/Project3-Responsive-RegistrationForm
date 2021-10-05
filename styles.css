@@ -28,7 +28,7 @@ main {
     min-height: 100vh;
     /* width: 90%; */
     margin: auto;
-    padding: 0 20px 20px;
+    padding: 0 16px 20px;
     background-color: white;
 }
 
@@ -101,6 +101,9 @@ input, select, textarea, button {
     padding: 10px 15px;
     font-family: 'Merriweather', serif;
 }
+input{
+    
+}
 
 select {
     height: 44px;
@@ -131,7 +134,7 @@ input::placeholder {
 }
 
 input#zip {
-    width: 150px;
+    width: 50%;
     margin-left: 0;
 }
 
@@ -258,11 +261,15 @@ legend {
     }
 
     input, select {
-        width: calc(100% - 200px);
+        width: 75%;
     }
 
     label {
-        width: 200px;
+        width: 25%;
         margin: auto 0;
+    }
+
+    input#zip {
+        width: 18.75%;
     }
 }
